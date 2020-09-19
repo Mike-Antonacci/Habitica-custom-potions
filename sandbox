@@ -134,7 +134,7 @@ function doPost(e) {
   var task = dataContents.task;
   
   // Check if a task was scored
-  if ((type == "scored"){
+  if (type == "scored"){
     api_sendPrivateMessage({"message" : MESSAGE_TEST, "toUserId" : USER_ID});
   }
   return HtmlService.createHtmlOutput();
@@ -207,5 +207,5 @@ function api_sendPrivateMessage(payload) {
   }
   
   var url = "https://habitica.com/api/v3/members/send-private-message";
-  return UrlFetchApp.fetch(url, params);
+  UrlFetchApp.fetch(url, params);
 }
